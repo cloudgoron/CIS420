@@ -5,6 +5,8 @@
 		<title>Bootstrap play</title>
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/custom.css" rel="stylesheet">
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
 		<script src="js/playlist.js"></script>
 		<script src="js/respond.js"></script>
 	</head>
@@ -19,16 +21,10 @@
 
 
 
-		<div class="btn-group" data-toggle="buttons">
-		  <label class="btn btn-primary active">   
-		    <input type="radio" name="options" id="option1" autocomplete="off" checked> Limo
-		  </label>
-		  <label class="btn btn-primary">
-		    <input type="radio" name="options" id="option2" autocomplete="off" > SUV
-		  </label>
-		  <label class="btn btn-primary">
-		    <input type="radio" name="options" id="option3" autocomplete="off"> SEDAN
-		  </label>
+		 <div class="btn-group">
+  			<button type="button" class="btn btn-primary" onclick="$('#carousel_list').html(printListAsCarousel(limos, 'limo'));">LIMO</button>
+  			<button type="button" class="btn btn-primary" onclick="$('#carousel_list').html(printListAsCarousel(suvs, 'suv'));">SUV</button>
+  			<button type="button" class="btn btn-primary" onclick="$('#carousel_list').html(printListAsCarousel(sedans, 'sedan'));">SEDAN</button>
 		</div>
 
 
@@ -46,7 +42,11 @@
 		  </ol>
 
 		  <!-- Wrapper for slides -->
-		  <div class="carousel-inner" role="listbox">
+		  <div id = "carousel_list" class="carousel-inner" role="listbox">
+		  	<script>
+				$('#carousel_list').html(printListAsCarousel(limos, 'limo'));
+			</script>
+		    <!--
 		    <div class="item active">
 		      <img src="images/images.jpeg" alt="...">
 		      <div class="carousel-caption">
@@ -59,6 +59,7 @@
 		        <p>slide 2</p>
 		      </div>
 		    </div>
+		    -->
 		  </div>
 
 		  <!-- Controls -->
@@ -75,8 +76,7 @@
 		<input type="button" value="this is a button" onclick="printCars();">
 
 		<!-- Javascript -->
-		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
+		
 	</body>
 </html>
 <!--
