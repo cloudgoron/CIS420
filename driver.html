@@ -9,31 +9,14 @@
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/playlist.js"></script>
 		<script src="js/respond.js"></script>
-		<script>
-			//I couldnt figure out how to use jQuery in the seperate js file
-			function changeCarouselList(list, carType){
-				$('#carousel_indicators').html(printCarouselIndicators(list.length));
-				$('#carousel_list').html(printCarListAsCarousel(list, carType));
-			};
-		</script>
 	</head>
 	<body >
 
 		<ol class="breadcrumb">
 		  <li><a href="index.html">Home</a></li>
-		  <li><class="active">Choose Vechicle</a></li>
+		  <li><a href="vehicle.html">Choose Vechicle</a></li>
+		  <li class="active">Driver Preference</li>
 		</ol>
-
-
-
-		<!-- RADIO BUTTONS FOR CAR TYPE -->
-		 <div class="btn-group">
-  			<button type="button" class="btn btn-primary" onclick="changeCarouselList(limos, 'limo');">LIMO</button>
-  			<button type="button" class="btn btn-primary" onclick="changeCarouselList(suvs, 'suv');">SUV</button>
-  			<button type="button" class="btn btn-primary" onclick="changeCarouselList(sedans, 'sedan');">SEDAN</button>
-		</div>
-
-
 
 
 
@@ -43,18 +26,16 @@
 		<!-- CAROUSEL -->
 		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false" style="background-color:green">
 		  <!-- Indicators -->
-		  
 		  <ol class="carousel-indicators" id="carousel_indicators">
 		    <script>
-				$('#carousel_indicators').html(printCarouselIndicators(limos.length));
+				$('#carousel_indicators').html(printCarouselIndicators(drivers.length));
 			</script>
 		  </ol>
-
 
 		  <!-- Wrapper for slides -->
 		  <div id = "carousel_list" class="carousel-inner" role="listbox">
 		  	<script>
-				$('#carousel_list').html(printCarListAsCarousel(limos, 'limo'));
+				$('#carousel_list').html(printDriverListAsCarousel(drivers));
 			</script>
 		  </div>
 
