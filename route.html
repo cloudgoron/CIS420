@@ -5,9 +5,108 @@
 		<title>Bootstrap play</title>
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/custom.css" rel="stylesheet">
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/custom.js"></script>
 		<script src="js/respond.js"></script>
+		<script src="js/map.js"></script>
+		<script>
+			var carAndDriver = getCarAndDriverFromURL();
+		</script>
+		<script src="https://maps.googleapis.com/maps/api/js?key="+devKey;></script>
+   		
 	</head>
-	<body>
+	<body onload="initialize();">
 		
+
+		<ol class="breadcrumb">
+		  	<li><a href="index.html">Home</a></li>
+		  	<li><a href="vehicle.html">Choose Vechicle</a></li>
+		  	<li><a href="driver.html">Driver Preference</a></li>
+		  	<li class="active">Select Route</li>
+		</ol>
+
+		
+
+
+
+		<!--  FORM AND MAP ROW  -->
+		<div class="row">
+
+
+
+
+			<!-- FORM COLUMN  -->
+        	<div class="col-lg-6" "col-sm-12">
+        		<form>
+
+
+				  	<div id="divForStartAddr" class="form-group">
+				    	
+				    	<label for="StartAddress">Start Address</label>
+				    	<input type="text" class="form-control" id="startAddress" placeholder="Example: 100 Granby St Norfolk, VA" onfocus='startErrorMsg.value = ""' onchange="validate(startAddress, divForStartAddr, 'start');">
+				    	<input type="text" class="error_msg" id="startErrorMsg" value="" size="100" disabled>
+
+				  	</div>
+
+
+
+
+				  	<div id="divForEndAddr" class="form-group">
+
+				    	<label for="endAddress">End Address</label>
+				    	<input type="text" class="form-control" id="endAddress" placeholder="Enter end address" onfocus='endErrorMsg.value = ""' onchange="validate(endAddress, divForEndAddr, 'end');">
+				    	<input type="text" class="error_msg" id="endErrorMsg" value="" size="100" disabled>
+
+				  	</div>
+
+
+
+				  	<button type="button" class="btn btn-default" onclick="calcRoute();">Calculate route</button>
+
+
+				  	<div id = "divForPrice" class="form-group">
+				    	<label for="testing">Price</label>
+				    	<div class="input-group">
+				    		<div class="input-group-addon">$</div>
+				    		<input type="text" class="form-control" id="priceField" placeholder="Amount" disabled>
+				    	</div>
+				  	</div>
+
+
+				</form>
+
+
+
+
+				<!--    FORM WITH HIDDEN INPUT AND CHECKOUT BUTTON    -->
+				<form action="checkout.html" method = "get">
+					<input type="submit" class="btn btn-default" value = "Checkout" onclick="return validateForCheckout();">
+					<input type="hidden" id="carType4Pass" name="carType">
+					<input type="hidden" id="carIndex4Pass" name="car">
+					<input type="hidden" id="driver4Pass" name="driver">
+					<input type="hidden" id="start4Pass" name="start">
+					<input type="hidden" id="end4Pass" name="end">
+					<input type="hidden" id="distance4Pass" name="distance">
+					<input type="hidden" id="price4Pass" name="price">
+				</form>
+				<!--    END FORM WITH HIDDEN INPUT AND CHECKOUT BUTTON    -->
+
+			</div>
+			<!-- END FORM COLUMN  -->
+
+
+
+
+
+			<div class="col-lg-6" "col-sm-12">
+				<div id="map-canvas" style="width: 500; height: 500"></div>
+			</div>
+
+		</div>
+		<!--    END OF FORM AND MAP ROW  -->
+
+
+
 	</body>
 </html>
