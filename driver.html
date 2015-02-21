@@ -9,6 +9,9 @@
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/playlist.js"></script>
 		<script src="js/respond.js"></script>
+		<script>
+			var car = getCarFromURL();
+		</script>
 	</head>
 	<body >
 
@@ -18,7 +21,10 @@
 		  <li class="active">Driver Preference</li>
 		</ol>
 
-
+		<script>
+		// 	alert(car.list);
+		// 	alert(car.listIndex);
+		</script>
 
 
 
@@ -35,7 +41,7 @@
 		  <!-- Wrapper for slides -->
 		  <div id = "carousel_list" class="carousel-inner" role="listbox">
 		  	<script>
-				$('#carousel_list').html(printDriverListAsCarousel(drivers));
+				$('#carousel_list').html(printDriverListAsCarousel(drivers, car));
 			</script>
 		  </div>
 

@@ -5,9 +5,79 @@
 		<title>Bootstrap play</title>
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/custom.css" rel="stylesheet">
+		<script src="js/playlist.js"></script>
 		<script src="js/respond.js"></script>
+		<script>
+			var orderInfo = getAllFromURLForCheckout();
+			// document.getElementById("carNameField").value = orderInfo.carName;
+		</script>
 	</head>
 	<body>
+
+
+		<ol class="breadcrumb">
+		  	<li><a href="index.html">Home</a></li>
+		  	<li><a href="vehicle.html">Choose Vechicle</a></li>
+		  	<li><a href="driver.html">Driver Preference</a></li>
+		  	<li><a href="route.html">Select Route</a></li>
+		  	<li class="active">Checkout</li>
+		</ol>
 		
+
+
+		<form>
+			<div class="input-group">
+	    		<div class="input-group-addon">Car</div>
+	    		<input type="text" class="form-control" id="carNameField" disabled>
+	    	</div>
+
+
+	    	<div class="input-group">
+	    		<div class="input-group-addon">Vehicle Price Per Mile $</div>
+	    		<input type="text" class="form-control" id="ppmField" disabled>
+	    	</div>
+
+
+	    	<div class="input-group">
+	    		<div class="input-group-addon">Preferred Driver</div>
+	    		<input type="text" class="form-control" id="driverField" disabled>
+	    	</div>
+
+
+	    	<div class="input-group">
+	    		<div class="input-group-addon">Start Address</div>
+	    		<input type="text" class="form-control" id="startAddrField" disabled>
+	    	</div>
+
+
+	    	<div class="input-group">
+	    		<div class="input-group-addon">End Address</div>
+	    		<input type="text" class="form-control" id="endAddrField" disabled>
+	    	</div>
+
+
+	    	<div class="input-group">
+	    		<div class="input-group-addon">Distance</div>
+	    		<input type="text" class="form-control" id="distanceField" disabled>
+	    	</div>
+
+
+	    	<div class="input-group">
+	    		<div class="input-group-addon">Total $</div>
+	    		<input type="text" class="form-control" id="priceField" disabled>
+	    	</div>
+		</form>
+
+
+		<script>
+			//im pretty sure this isnt the correct way to do this
+			document.getElementById("carNameField").value = orderInfo.carName;
+			document.getElementById("ppmField").value = orderInfo.ppm;
+			document.getElementById("driverField").value = orderInfo.driverName;
+			document.getElementById("startAddrField").value = orderInfo.startAddr;
+			document.getElementById("endAddrField").value = orderInfo.endAddr;
+			document.getElementById("distanceField").value = orderInfo.dist;
+			document.getElementById("priceField").value = orderInfo.price;
+		</script>
 	</body>
 </html>
