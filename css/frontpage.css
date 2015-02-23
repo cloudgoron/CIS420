@@ -1,0 +1,21 @@
+body{
+	background-image: url("../images/beach_edit.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#logo-center{
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	margin-left: -157px;
+
+	max-width: 315px;
+	height: auto;
+}
+
+#button-center{
+	position: relative;
+	top: 10px;
+}
