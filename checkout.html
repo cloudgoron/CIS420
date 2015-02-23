@@ -3,8 +3,9 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Ride-A-Saurus | Summary</title>
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/bootstrap.css" rel="stylesheet">
 		<link href="css/custom.css" rel="stylesheet">
+		<link href="css/frontpage.css" rel="stylesheet">
 		<script src="js/custom.js"></script>
 		<script src="js/respond.js"></script>
 		<script>
@@ -25,59 +26,40 @@
 		
 
 
-		<form>
-			<div class="input-group">
-	    		<div class="input-group-addon">Car</div>
-	    		<input type="text" class="form-control" id="carNameField" disabled>
-	    	</div>
+	<div class="container">
 
 
-	    	<div class="input-group">
-	    		<div class="input-group-addon">Vehicle Price Per Mile $</div>
-	    		<input type="text" class="form-control" id="ppmField" disabled>
-	    	</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">Order Details</div>
+			<div class="table-responsive table table-bordered">
+  				<table class="table">
+  					<tr><th>Car</th><td id="carNameTD"></td></tr>
+  					<tr><th>Price Per Mile $</th><td id="ppmTD"></td></tr>
+  					<tr><th>Preferred Driver</th><td id="driverTD">Driver name</td></tr>
+  					<tr><th>Start Address</th><td id="startAddrTD">100 thing street, City, ST</td></tr>
+  					<tr><th>End Address</th><td id="endAddrTD">100 thing street, City, ST</td></tr>
+  					<tr><th>Distance</th><td id="distanceTD">233 miles</td></tr>
+  					<tr><th>Total $</th><td id="priceTD">199.99</td></tr>
+  				</table>
+			</div>
+		</div>
 
 
-	    	<div class="input-group">
-	    		<div class="input-group-addon">Preferred Driver</div>
-	    		<input type="text" class="form-control" id="driverField" disabled>
-	    	</div>
 
-
-	    	<div class="input-group">
-	    		<div class="input-group-addon">Start Address</div>
-	    		<input type="text" class="form-control" id="startAddrField" disabled>
-	    	</div>
-
-
-	    	<div class="input-group">
-	    		<div class="input-group-addon">End Address</div>
-	    		<input type="text" class="form-control" id="endAddrField" disabled>
-	    	</div>
-
-
-	    	<div class="input-group">
-	    		<div class="input-group-addon">Distance</div>
-	    		<input type="text" class="form-control" id="distanceField" disabled>
-	    	</div>
-
-
-	    	<div class="input-group">
-	    		<div class="input-group-addon">Total $</div>
-	    		<input type="text" class="form-control" id="priceField" disabled>
-	    	</div>
-		</form>
 
 
 		<script>
 			//im pretty sure this isnt the correct way to do this
-			document.getElementById("carNameField").value = orderInfo.carName;
-			document.getElementById("ppmField").value = orderInfo.ppm;
-			document.getElementById("driverField").value = orderInfo.driverName;
-			document.getElementById("startAddrField").value = orderInfo.startAddr;
-			document.getElementById("endAddrField").value = orderInfo.endAddr;
-			document.getElementById("distanceField").value = orderInfo.dist;
-			document.getElementById("priceField").value = orderInfo.price;
+			document.getElementById("carNameTD").innerHTML = orderInfo.carName;
+			document.getElementById("ppmTD").innerHTML = orderInfo.ppm;
+			document.getElementById("driverTD").innerHTML = orderInfo.driverName;
+			document.getElementById("startAddrTD").innerHTML = orderInfo.startAddr;
+			document.getElementById("endAddrTD").innerHTML = orderInfo.endAddr;
+			document.getElementById("distanceTD").innerHTML = orderInfo.dist;
+			document.getElementById("priceTD").innerHTML = orderInfo.price;
 		</script>
+
+	</div>
+
 	</body>
 </html>
