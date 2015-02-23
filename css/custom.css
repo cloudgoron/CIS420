@@ -31,10 +31,27 @@ html, body{
 	border-radius: 15px;
 }
 
+#paymentForm{
+	color: black;
+
+	background-color: white;
+
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+	border-radius: 20px;
+}
+
+.indicates_required{
+	color: red;
+}
+
 #divForPrice{
 	margin-top: 15px;
 }
 
-#divForStartAddr, #divForEndAddr, #divForPrice, #route-button, #checkout-button{
+/*#divForStartAddr, #divForEndAddr, #divForPrice, #route-button, #checkout-button{
 	margin-left: 20px;
-}
+}*/
