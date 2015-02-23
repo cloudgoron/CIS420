@@ -138,12 +138,12 @@ function printCarListAsCarousel(list, carType){
 	//this function assumes the list is not empty
 	var img = list[0].img;
 	var txt = list[0].txt;
-	var htmlStr = '<div class="item active"><img src="' + img + '" alt="..."><div class="carousel-caption"><p>'+txt+'<br/><form action="driver.html" method = "get"><input type="hidden" name="carType" value="'+carType+'"><input type="hidden" name="car" value="0"><input type="submit" class="btn btn-default" value="I want this one"></form></p></div></div>';
+	var htmlStr = '<div class="item active"><img src="' + img + '" alt="..." class="carousel-image"><div class="carousel-caption"><p><br/><form action="driver.html" method = "get"><input type="hidden" name="carType" value="'+carType+'"><input type="hidden" name="car" value="0"><input type="submit" class="btn btn-default" value="I want this one"></form></p></div></div>';
 	// document.writeln(cars.length);
 	for(var i = 1; i < list.length; i ++){
 		img = list[i].img;
 		txt = list[i].txt;
-		htmlStr += '<div class="item"><img src="' + img + '" alt="..."><div class="carousel-caption"><p>'+txt+'<form action="driver.html" method = "get"><input type="hidden" name="carType" value="'+carType+'"><input type="hidden" name="car" value="'+i+'"><input type="submit" class="btn btn-default" value="I want this one"></form></p></div></div>';
+		htmlStr += '<div class="item"><img src="' + img + '" alt="..." class="carousel-image"><div class="carousel-caption"><p><form action="driver.html" method = "get"><input type="hidden" name="carType" value="'+carType+'"><input type="hidden" name="car" value="'+i+'"><input type="submit" class="btn btn-default" value="I want this one"></form></p></div></div>';
 	}
 	return htmlStr;
 };
@@ -160,12 +160,12 @@ function printDriverListAsCarousel(list, car){
 	var img = list[0].img;
 	var txt = list[0].txt;
 	// alert(car.list);
-	var htmlStr = '<div class="item active"><img src="' + img + '" alt="..."><div class="carousel-caption"><p>'+txt+'<br/><form action="route.html" method = "get"><input type="hidden" name="carType" value="'+car.list+'"><input type="hidden" name="car" value="'+car.listIndex+'"><input type="hidden" name="driver" value="0"><input type="submit" class="btn btn-default" value="I want this one"></form></p></div></div>';
+	var htmlStr = '<div class="item active"><img src="' + img + '" alt="..." class="carousel-image"><div class="carousel-caption carousel-image"><p><br/><form action="route.html" method = "get"><input type="hidden" name="carType" value="'+car.list+'"><input type="hidden" name="car" value="'+car.listIndex+'"><input type="hidden" name="driver" value="0"><input type="submit" class="btn btn-default" value="I want this one"></form></p></div></div>';
 	// document.writeln(cars.length);
 	for(var i = 1; i < list.length; i ++){
 		img = list[i].img;
 		txt = list[i].txt;
-		htmlStr += '<div class="item"><img src="' + img + '" alt="..."><div class="carousel-caption"><p>'+txt+'<form action="route.html" method = "get"><input type="hidden" name="carType" value="'+car.list+'"><input type="hidden" name="car" value="'+car.listIndex+'"><input type="hidden" name="driver" value="'+i+'"><input type="submit" class="btn btn-default" value="I want this one"></form></p></div></div>';
+		htmlStr += '<div class="item"><img src="' + img + '" alt="..." class="carousel-image"><div class="carousel-caption carousel-image"><p><form action="route.html" method = "get"><input type="hidden" name="carType" value="'+car.list+'"><input type="hidden" name="car" value="'+car.listIndex+'"><input type="hidden" name="driver" value="'+i+'"><input type="submit" class="btn btn-default" value="I want this one"></form></p></div></div>';
 	}
 	return htmlStr;
 };

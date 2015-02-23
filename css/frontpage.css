@@ -9,13 +9,15 @@ body{
 	position: absolute;
 	top: 10%;
 	left: 50%;
-	margin-left: -157px;
+	margin-left: -150px;
 
 	max-width: 315px;
 	height: auto;
 }
 
 #button-center{
-	position: relative;
-	top: 10px;
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	margin-left: -65px;
 }
