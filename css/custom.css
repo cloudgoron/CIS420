@@ -16,3 +16,25 @@ html, body{
 
 	margin: 0px auto;
 }
+
+#divForStartAddr, #divForEndAddr, #divForPrice{
+	color: black;
+
+	background-color: white;
+	display: block;
+
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 15px;
+
+	border-radius: 15px;
+}
+
+#divForPrice{
+	margin-top: 15px;
+}
+
+#divForStartAddr, #divForEndAddr, #divForPrice, #route-button, #checkout-button{
+	margin-left: 20px;
+}
